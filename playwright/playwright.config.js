@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 // @ts-nocheck
-const { devices } = require("@playwright/test");
+const { chromium, devices } = require("@playwright/test");
 
 /**
  * Read environment variables from file.
@@ -42,6 +42,8 @@ const config = {
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
+    headless: false,
+    slowMo: 500,
   },
 
   /* Configure projects for major browsers */
